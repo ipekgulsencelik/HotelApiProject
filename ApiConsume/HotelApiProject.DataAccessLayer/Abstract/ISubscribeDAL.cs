@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelApiProject.EntityLayer.Concrete;
 
 namespace HotelApiProject.DataAccessLayer.Abstract
 {
-    internal class ISubscribeDAL
+    public interface ISubscribeDAL : IGenericDAL<Subscribe>
     {
     }
 }
