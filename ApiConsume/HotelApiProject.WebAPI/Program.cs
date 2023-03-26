@@ -3,6 +3,7 @@ using HotelApiProject.BusinessLayer.Concrete;
 using HotelApiProject.DataAccessLayer.Abstract;
 using HotelApiProject.DataAccessLayer.Concrete;
 using HotelApiProject.DataAccessLayer.Concrete.EntityFramework;
+using HotelApiProject.EntityLayer.Concrete;
 
 namespace HotelApiProject.WebAPI
 {
@@ -31,6 +32,15 @@ namespace HotelApiProject.WebAPI
             builder.Services.AddScoped<ITestimonialDAL, EFTestimonialDAL>();
             builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
+            builder.Services.AddCors(opt =>
+            {
+                opt.AddPolicy("OtelApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -45,8 +55,9 @@ namespace HotelApiProject.WebAPI
                 app.UseSwaggerUI();
             }
 
-            app.UseAuthorization();
+            app.UseCors("OtelApiCors");
 
+            app.UseAuthorization();
 
             app.MapControllers();
 
