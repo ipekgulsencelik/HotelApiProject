@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -21,6 +21,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelApiProject.EntityLayer\HotelApiProject.EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\SubscribeDTO\" />
+    <Folder Include="DTOs\StaffDTO\" />
+    <Folder Include="DTOs\ServiceDTO\" />
   </ItemGroup>
 
 </Project>
