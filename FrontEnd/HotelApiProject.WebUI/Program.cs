@@ -10,6 +10,8 @@ namespace HotelApiProject.WebUI
             
             builder.Services.AddHttpClient();
 
+            builder.Services.AddAutoMapper(typeof(Program));
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
