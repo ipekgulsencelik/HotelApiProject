@@ -54,5 +54,17 @@ namespace HotelApiProject.WebUI.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> DeleteService(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync($"http://localhost:5000/api/Service/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            return View();
+        }
     }
 }
