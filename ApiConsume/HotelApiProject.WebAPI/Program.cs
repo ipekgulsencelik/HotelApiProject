@@ -3,7 +3,6 @@ using HotelApiProject.BusinessLayer.Concrete;
 using HotelApiProject.DataAccessLayer.Abstract;
 using HotelApiProject.DataAccessLayer.Concrete;
 using HotelApiProject.DataAccessLayer.Concrete.EntityFramework;
-using HotelApiProject.EntityLayer.Concrete;
 
 namespace HotelApiProject.WebAPI
 {
@@ -34,6 +33,9 @@ namespace HotelApiProject.WebAPI
 
             builder.Services.AddScoped<IAboutDAL, EFAboutDAL>();
             builder.Services.AddScoped<IAboutService, AboutManager>();
+
+            builder.Services.AddScoped<IBookingDAL, EFBookingDAL>();
+            builder.Services.AddScoped<IBookingService, BookingManager>();
 
             builder.Services.AddAutoMapper(typeof(Program));
 
