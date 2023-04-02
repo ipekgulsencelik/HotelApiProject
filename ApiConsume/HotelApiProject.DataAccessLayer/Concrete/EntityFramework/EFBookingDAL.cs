@@ -9,5 +9,13 @@ namespace HotelApiProject.DataAccessLayer.Concrete.EntityFramework
         public EFBookingDAL(Context context) : base(context)
         {
         }
+
+        public void BookingStatusChangeApproved(int id)
+        {
+            var context = new Context();
+            var values = context.Bookings.Find(id);
+            values.Status = "Approved";
+            context.SaveChanges();
+        }
     }
 }

@@ -50,5 +50,12 @@ namespace HotelApiProject.WebAPI.Controllers
             var values = _bookingService.TGetByID(id);
             return Ok(values);
         }
+
+        [HttpPut("UpdateBookingStatus")]
+        public IActionResult UpdateBookingStatus(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved(id);
+            return Ok();
+        }
     }
 }
