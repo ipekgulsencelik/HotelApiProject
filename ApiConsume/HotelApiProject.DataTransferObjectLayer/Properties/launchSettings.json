@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "HotelApiProject.DataTransferObjectLayer": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54046;http://localhost:54050"
+    }
+  }
+}
