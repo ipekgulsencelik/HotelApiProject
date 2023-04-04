@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidApi.Consume", "RapidAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonWebToken", "JsonWebToken", "{31EDB2AB-57D5-4CE1-BE8A-68FE1132F4C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebToken.WebApi", "JsonWebToken\JsonWebToken.WebApi\JsonWebToken.WebApi.csproj", "{88F56DF0-EB2F-44AD-8205-5C8BA988AEE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonWebToken.WebApi", "JsonWebToken\JsonWebToken.WebApi\JsonWebToken.WebApi.csproj", "{88F56DF0-EB2F-44AD-8205-5C8BA988AEE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

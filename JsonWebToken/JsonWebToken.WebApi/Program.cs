@@ -42,6 +42,7 @@ namespace JsonWebToken.WebApi
 
             app.UseAuthorization();
 
+            app.UseAuthentication();
 
             app.MapControllers();
 
