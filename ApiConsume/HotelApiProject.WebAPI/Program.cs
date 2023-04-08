@@ -43,6 +43,9 @@ namespace HotelApiProject.WebAPI
             builder.Services.AddScoped<IGuestDAL, EFGuestDAL>();
             builder.Services.AddScoped<IGuestService, GuestManager>();
 
+            builder.Services.AddScoped<IMessageDAL, EFMessageDAL>();
+            builder.Services.AddScoped<IMessageService, MessageManager>();
+
             builder.Services.AddAutoMapper(typeof(Program));
 
             builder.Services.AddCors(opt =>
