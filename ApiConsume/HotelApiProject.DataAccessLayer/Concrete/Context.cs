@@ -22,5 +22,6 @@ namespace HotelApiProject.DataAccessLayer.Concrete
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<MessageCategory> MessageCategories { get; set; }
+        public DbSet<WorkLocation> WorkLocations { get; set; }
     }
 }
